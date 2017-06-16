@@ -1,23 +1,16 @@
 module.exports = () => `
-Welcome to the SMS Todo List!!!
+Welcome!
 
-This is a simple check list that you can
-manage from your phone.
+If you want to add a practice simply text:
 
-If you want to add a note simple text to 844-295-1836
+new [practice name] [amountType]
 
-add [note]
+example: new vajrasattva count or new meditation time
 
-If you want to see all of your items text to 844-295-1836
+To add a new practice session text:
 
-ls
+add [practice name] [amount]
 
-If you want to mark an item complete text
-
-check [item number]
-
-If you want to remove an item text
-
-rm [item number]
+example: add vajrasattva 108
 
 `

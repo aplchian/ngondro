@@ -3,7 +3,7 @@ const { join, map, ifElse, always, equals } = require('ramda')
 
 module.exports = todos => {
   return `
-Todo List
+Totals
 ---------------
 ${list(todos)}
 ---------------

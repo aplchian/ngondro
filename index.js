@@ -1,6 +1,6 @@
-process.env.NODE_ENV !== 'production' && require('dotenv').config()
+require('dotenv').config()
 
-const { split, path } = require('ramda')
+const { split, path, toLower } = require('ramda')
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 
 app.post('/sms', async (req, res) => {
   const [cmd, ...rest] = split(' ', path(['body', 'Body'], req))
-  const body = await handle(req.body.From, cmd, rest)
+  const body = await handle(req.body.From, toLower(cmd), rest)
   sendSMS({
     to: req.body.From,
     from: req.body.To,
@@ -25,4 +25,4 @@ app.post('/sms', async (req, res) => {
   res.send({ ok: true })
 })
 
-app.listen(3000)
+app.listen(3041)
