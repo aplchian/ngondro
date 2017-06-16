@@ -5,7 +5,7 @@ machine:
     version: 8.1.0
   test:
     override:
-      - echo "see branch"  
+      - echo "true"  
 deployment:
   # development:
   #   branch: development
