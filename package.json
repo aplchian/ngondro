@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "nodemon index.js",
     "start": "node index.js",
-    // "test": "tape test.js | tap-spec"
+    "test": "tape ./test/store_test.js"
   },
   "keywords": [],
   "author": "",
