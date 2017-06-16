@@ -5,7 +5,7 @@ machine:
     version: 8.1.0
   test:
     override:
-      - echo "true"  
+      - echo "done"  
 deployment:
   # development:
   #   branch: development
