@@ -1,0 +1,20 @@
+machine:
+  timezone:
+    America/New_York
+  node:
+    version: 6.9.2
+deployment:
+  # development:
+  #   branch: development
+  #   commands:
+  #     - cd /home/ubuntu/voyager/pioneer && npm install && npm test
+  #     - cd /home/ubuntu/voyager/frontier && npm install
+  #     - cf target -o searchbookgo -s development
+  #     - cf push ezwaves-pioneer-dev -p ./pioneer -b https://github.com/cloudfoundry/nodejs-buildpack.git#v1.5.26
+  #     - cd /home/ubuntu/voyager/frontier && REACT_APP_ENV=staging npm run build
+  #     - now ./frontier/build --token $NOW_CLI_TOKEN --alias staging.searchbookgo.com
+  production:
+    branch: master
+    commands:
+      - cd /home/ubuntu
+      - now . --token $NOW_CLI_TOKEN --alias prajna.now.sh
