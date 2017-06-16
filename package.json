@@ -8,6 +8,10 @@
     "start": "node index.js",
     "test": "tape ./test/store_test.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aplchian/prajna"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
