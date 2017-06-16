@@ -19,6 +19,6 @@ deployment:
   production:
     branch: master
     commands:
-      - cd /home/ubuntu/prajna && npm install && now --help
+      - cd /home/ubuntu/prajna && npm install && npm list --depth=0
       - now ./prajna --token - $NOW_CLI_TOKEN -e DB=$DB_URL -e SID=$TWILIO_SID -e TOKEN=$TWILIO_TOKEN --alias prajna.now.sh
 
