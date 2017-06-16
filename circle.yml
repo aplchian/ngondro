@@ -3,6 +3,9 @@ machine:
     America/New_York
   node:
     version: 8.1.0
+  test:
+    override:
+      - echo "see branch"  
 deployment:
   # development:
   #   branch: development
