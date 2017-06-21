@@ -25,6 +25,7 @@ module.exports = async (acct, text) => {
 /**
  * todo : parse time to hours / minutes
  */
+
   
   const totalCount = prop('amountType', practice) === 'time'
                       ? reduce(reduceSessionAmount, 0, newSessions)
@@ -33,7 +34,8 @@ module.exports = async (acct, text) => {
   const typeStr = prop('amountType', practice) === 'time' ? 'minutes' : 'times'
 
   const returnMsg = `
-    You have added a new ${practice.name} session! total: ${totalCount} ${typeStr}
+    You have added a new ${practice.name} session!
+    total: ${totalCount} ${typeStr}
   `
 
   return store

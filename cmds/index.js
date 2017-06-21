@@ -18,9 +18,9 @@ module.exports = async (acct, cmd, rest) => {
       return add(acct, rest)
     case 'new':
       return newPractice(acct, rest)
-    case 'ls':
-      const state = await store.get(acct)
-      return ls(prop('todos', state))
+    case 'stats':
+      const sums = await store.getUserPractices(acct)
+      return ls(sums)
     default:
       return help()
   }
