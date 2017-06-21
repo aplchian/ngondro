@@ -16,11 +16,8 @@ app.get('/', (req, res) => {
 
 app.post('/sms', async (req, res) => {
 
-
-  const body = process.env.DEV === 'true' ? prop('body', req) : path(['body', 'Body'], req)
-
+  const body = prop('body', req)
   const [cmd, ...rest] = split(' ', prop('Body', body))
-
   const bodyRes = await handle(body.From, toLower(cmd), rest)
 
   sendSMS({
