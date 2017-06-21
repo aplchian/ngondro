@@ -1,21 +1,19 @@
 const store = require('../lib/store')
 const { join, map, ifElse, always, equals } = require('ramda')
 
-module.exports = todos => {
+module.exports = sums => {
   return `
 Totals
 ---------------
-${list(todos)}
+${list(sums)}
 ---------------
   `
 }
 
-function list(todos) {
-  return join('\n', map(li, todos))
+function list(sessions) {
+  return join('\n', map(li, sessions))
 }
 
-const displayCheck = ifElse(equals(true), always('X'), always(' '))
-
-function li(todo) {
-  return `[${displayCheck(todo.completed)}] ${todo.id} - ${todo.text}`
+function li({ name, sum }) {
+  return `${name}: ${sum}`
 }
