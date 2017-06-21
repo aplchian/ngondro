@@ -6,7 +6,7 @@ const app = express()
 const bodyParser = require('body-parser')
 const handle = require('./cmds')
 const sendSMS = require('./lib/sms')
-const dev = process.env.DEV
+
 
 app.use(bodyParser.urlencoded({ extended: true }))
 
