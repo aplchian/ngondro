@@ -21,7 +21,7 @@ app.post('/sms', async (req, res) => {
 
   const [cmd, ...rest] = split(' ', prop('Body', body))
 
-  const bodyRes = await handle(req.body.From, toLower(cmd), rest)
+  const bodyRes = await handle(body.From, toLower(cmd), rest)
 
   sendSMS({
     to: body.From,
